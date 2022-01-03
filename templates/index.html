@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <img src="{{ image }}" alt="User Image">
+</body>
+
+<form method="post">
+        <label for="content">Jednadžba</label>
+        <br>
+        <input name="content"
+                  rows="15"
+                  cols="60"
+                  autocomplete="off"
+                  value={{string}}>{{ request.form['content'] }}
+                </input>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+<body>Riješenje: {{solution}}</body>
+</html>
