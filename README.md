@@ -5,5 +5,8 @@ You can fine tune the function with dilate_multiplier parameter if the symbols a
 
 The second part is the trained convolutional network model. The training was done by using two publicly available datasets. 
 https://github.com/wblachowski/bhmsds
-https://www.kaggle.com/clarencezhao/handwritten-math-symbol-dataset
-Network consists of ![network_architecture](https://user-images.githubusercontent.com/53495210/149681422-ab9810e2-5bdf-4f35-890b-e434910bb69f.png)
+https://www.kaggle.com/xainano/handwrittenmathsymbols
+![network_architecture](https://user-images.githubusercontent.com/53495210/149681422-ab9810e2-5bdf-4f35-890b-e434910bb69f.png)
+The bigger dataset, which is extractede from CHROME dataset, has symbols which are very thin, almost never thicker than 1px. We also preprocess all the input images so they are 1px thin so that the input data is as similar as possible to the training dataset. Afterwards, they are thinned.
+The first convolutional layer has a (5x5) kernel which is more suited towards the extraction of data in low information environment of binarized single channel images. The data is
+also regularized with 2 MaxPool layers, a Batch Normalization layer and a Dropout layer to ensure that our model is not overfitted.
