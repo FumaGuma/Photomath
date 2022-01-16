@@ -7,6 +7,7 @@ The second part is the trained convolutional network model. The training was don
 https://github.com/wblachowski/bhmsds
 https://www.kaggle.com/xainano/handwrittenmathsymbols
 ![network_architecture](https://user-images.githubusercontent.com/53495210/149681422-ab9810e2-5bdf-4f35-890b-e434910bb69f.png)
+
 The bigger dataset, which is extracted from CHROME dataset, has symbols which are very thin, almost never thicker than 1px. We also preprocess all the input images so they are 1px
 thin so that the input data is as similar as possible to the training dataset. Afterwards, they are thinned.
 The first convolutional layer has a (5x5) kernel which is more suited towards the extraction of data in low information environment of binarized single channel images. The data is
