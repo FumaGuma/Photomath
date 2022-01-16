@@ -4,9 +4,9 @@ First are the open CV image processing tools which is located in imageproc.py. P
 You can fine tune the function with dilate_multiplier parameter if the symbols are too partitioned and minimum_area parameter if background noise is being recognized as a symbol.
 
 The second part is the trained convolutional network model. The training was done by using two publicly available datasets. 
-
 https://github.com/wblachowski/bhmsds
 https://www.kaggle.com/xainano/handwrittenmathsymbols
+
 ![network_architecture](https://user-images.githubusercontent.com/53495210/149681422-ab9810e2-5bdf-4f35-890b-e434910bb69f.png)
 
 The bigger dataset, which is extracted from CHROME dataset, has symbols which are very thin, almost never thicker than 1px. We also preprocess all the input images so they are 1px
