@@ -8,9 +8,6 @@ https://github.com/wblachowski/bhmsds
 https://www.kaggle.com/xainano/handwrittenmathsymbols
 
 <p align="center">
-![network_architecture](https://user-images.githubusercontent.com/53495210/149681422-ab9810e2-5bdf-4f35-890b-e434910bb69f.png)
-<p>
-<p align="center">
   <img src="https://user-images.githubusercontent.com/53495210/149681422-ab9810e2-5bdf-4f35-890b-e434910bb69f.png"/>
 </p>
 The bigger dataset, which is extracted from CHROME dataset, has symbols which are very thin, almost never thicker than 1px. We also preprocess all the input images so they are 1px
