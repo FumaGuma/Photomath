@@ -10,11 +10,6 @@ Handwritten math symbols dataset<br/>
 https://www.kaggle.com/xainano/handwrittenmathsymbols
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/53495210/149847896-6d0f80ab-4686-4beb-a5d1-6ac92cd415db.jpg"/>
-  <img src="https://user-images.githubusercontent.com/53495210/149847509-7a855326-80cc-4b0d-90f2-1e2ec1d8f4a3.jpg"/>
-</p>
-
-<p float="left">
   <img src="https://user-images.githubusercontent.com/53495210/149681422-ab9810e2-5bdf-4f35-890b-e434910bb69f.png"/>
   <img src="https://user-images.githubusercontent.com/53495210/149789537-5c83d79f-3cac-4a80-9988-238d3cb2f60c.png"/>
 </p>
@@ -29,3 +24,9 @@ It took `30` epochs to sucessfully train our model, reaching a `99%` train and v
 Equation solver is very straightforward. It checks the equation for invalid inputs and if the equation is valid, it splits it into a list of tokens. Solver then goes through the equation while respecting the order of operations. It solves the content of brackets first, applying multiplication and division, then addition and subtraction. You can run the solver using the <code>solver.solve</code> function.
 
 The lesson I learned from doing this project is that there are a lot of edge cases and changing one parameter in processing can significantly alter the predictions of the model, so if you optimize the preprocessing parameters for one series of images your model will give a worse performance on the other. There are also many small tweaks that can help the model correctly identify the equation, for example, the bounding boxes can be expanded on the `x-axis` around the brackets symbols because it helps maintain they shape when they are being reshaped to the dimensions of training data.
+
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/53495210/149847896-6d0f80ab-4686-4beb-a5d1-6ac92cd415db.jpg"/>
+  <img src="https://user-images.githubusercontent.com/53495210/149847509-7a855326-80cc-4b0d-90f2-1e2ec1d8f4a3.jpg"/>
+</p>
+
