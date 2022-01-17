@@ -22,3 +22,4 @@ also regularized with 2 MaxPool layers, a Batch Normalization layer and a Dropou
 It took 30 epochs to sucessfully train our model, reaching a 99% train and validation accuracy. You can run the cropped data through the network with the <code>imageprocessing.data_to_model</code> to obtain the model's prediction. Alternatively you can simply pass the original image to <code>imageprocessing.process_image</code> function to get the equation from the image.
 
 Solver is based on the 
+$`a^2+b^2=c^2`$
