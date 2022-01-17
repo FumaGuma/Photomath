@@ -8,7 +8,7 @@ The second part is the trained convolutional network model. The training was don
 Basic Handwritten Math Symbols Dataset<br/>
 https://github.com/wblachowski/bhmsds
 
-Handwritten math symbols dataset
+Handwritten math symbols dataset<br/>
 https://www.kaggle.com/xainano/handwrittenmathsymbols
 
 <p float="left">
