@@ -16,7 +16,7 @@ The bigger dataset, which is extracted from CHROME dataset, has symbols which ar
 they are 1px thin so that the input data is as similar as possible to the training dataset. Afterwards, they are centered.
 The first convolutional layer has a (5x5) kernel which is more suited towards the extraction of data in low information environment of binarized single channel images. The data is
 also regularized with 2 MaxPool layers, a Batch Normalization layer and a Dropout layer to ensure that our model is not overfitted.
-The model is sucessfully trained through 20 epochs, reaching a 99,7 train and validation accuracy.
+The model is sucessfully trained through 30 epochs, reaching a 99,7 train and validation accuracy.
 #
 #
 #
