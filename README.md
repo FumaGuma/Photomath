@@ -3,8 +3,6 @@ Basic implementation of handwritten digit recognizer with equation solver. It co
 First are the open CV image processing tools which is located in imageproc.py. Pass the image of the equation to the imageproc.cropped_dataset to get the array of cropped symbols. 
 You can fine tune the function with dilate_multiplier parameter if the symbols are too partitioned and minimum_area parameter if background noise is being recognized as a symbol.
 
-The second part is the trained convolutional network model. The training was done using two publicly available datasets. 
-
 Basic Handwritten Math Symbols Dataset<br/>
 https://github.com/wblachowski/bhmsds
 
@@ -16,6 +14,7 @@ https://www.kaggle.com/xainano/handwrittenmathsymbols
   <img src="https://user-images.githubusercontent.com/53495210/149789537-5c83d79f-3cac-4a80-9988-238d3cb2f60c.png"/>
 </p>
 
+The second part is the trained convolutional network model. The training was done using two publicly available datasets. 
 The bigger dataset, which is extracted from CHROME dataset, has symbols which are very thin, almost never thicker than 1px. That's why we also preprocess all the input images so
 they are 1px thin so that the input data is as similar as possible to the training dataset. Afterwards, they are centered.
 The first convolutional layer has a (5x5) kernel which is more suited towards the extraction of data in low information environment of binarized single channel images. The data is
