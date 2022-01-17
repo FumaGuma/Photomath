@@ -21,5 +21,4 @@ The first convolutional layer has a `(5x5)` kernel which is more suited towards 
 also regularized with `2` MaxPool layers, a Batch Normalization layer and a Dropout layer to ensure that our model is not overfitted.
 It took `30` epochs to sucessfully train our model, reaching a `99%` train and validation accuracy. You can run the cropped data through the network with the <code>imageprocessing.data_to_model</code> to obtain the model's prediction. Alternatively you can simply pass the original image to <code>imageprocessing.process_image</code> function to get the equation from the image.
 
-Solver is based on the 
-`a^2+b^2=c^2`
+Equation solver is very straightforward. It checks the equation for invalid inputs and splits it into a list of tokens. Solver then goes through the equation while respecting the order of operations. It solves the content of brackets first, applying multiplication and division, then addition and subtraction. You can run the solver using <code>solver.solve</code> function.
