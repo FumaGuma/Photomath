@@ -10,7 +10,7 @@ Handwritten math symbols dataset<br/>
 https://www.kaggle.com/xainano/handwrittenmathsymbols
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/53495210/149847838-216c76ed-fa99-43c5-ba8e-ec2565c44bfb.jpg"/>
+  <img src="https://user-images.githubusercontent.com/53495210/149847896-6d0f80ab-4686-4beb-a5d1-6ac92cd415db.jpg"/>
   <img src="https://user-images.githubusercontent.com/53495210/149847509-7a855326-80cc-4b0d-90f2-1e2ec1d8f4a3.jpg"/>
 </p>
 
