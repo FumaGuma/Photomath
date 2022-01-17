@@ -15,11 +15,11 @@ https://www.kaggle.com/xainano/handwrittenmathsymbols
 </p>
 
 The second part is the trained convolutional network model. The training was done using two publicly available datasets. 
-The bigger dataset, which is extracted from CHROME dataset, has symbols which are very thin, almost never thicker than '1px'. That's why we also preprocess all the input images so
+The bigger dataset, which is extracted from CHROME dataset, has symbols which are very thin, almost never thicker than `1px`. That's why we also preprocess all the input images so
 they are 1px thin so that the input data is as similar as possible to the training dataset. Afterwards, they are centered.
-The first convolutional layer has a '(5x5)' kernel which is more suited towards the extraction of data in low information environment of binarized single channel images. The data is
-also regularized with '2' MaxPool layers, a Batch Normalization layer and a Dropout layer to ensure that our model is not overfitted.
-It took 30 epochs to sucessfully train our model, reaching a 99% train and validation accuracy. You can run the cropped data through the network with the <code>imageprocessing.data_to_model</code> to obtain the model's prediction. Alternatively you can simply pass the original image to <code>imageprocessing.process_image</code> function to get the equation from the image.
+The first convolutional layer has a `(5x5)` kernel which is more suited towards the extraction of data in low information environment of binarized single channel images. The data is
+also regularized with `2` MaxPool layers, a Batch Normalization layer and a Dropout layer to ensure that our model is not overfitted.
+It took `30` epochs to sucessfully train our model, reaching a `99%` train and validation accuracy. You can run the cropped data through the network with the <code>imageprocessing.data_to_model</code> to obtain the model's prediction. Alternatively you can simply pass the original image to <code>imageprocessing.process_image</code> function to get the equation from the image.
 
 Solver is based on the 
 `a^2+b^2=c^2`
