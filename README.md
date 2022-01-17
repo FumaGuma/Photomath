@@ -6,7 +6,6 @@ You can fine tune the function with dilate_multiplier parameter if the symbols a
 The second part is the trained convolutional network model. The training was done using two publicly available datasets. 
 
 Basic Handwritten Math Symbols Dataset
-
 https://github.com/wblachowski/bhmsds
 
 Handwritten math symbols dataset
