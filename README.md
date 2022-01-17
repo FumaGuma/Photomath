@@ -20,3 +20,7 @@ The model is sucessfully trained through 20 epochs, reaching a 99,7 train and va
 #
 
 Solver is
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/53495210/149789537-5c83d79f-3cac-4a80-9988-238d3cb2f60c.png"/>
+</p>
