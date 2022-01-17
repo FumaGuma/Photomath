@@ -10,30 +10,24 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-
 	</head>
 	<body class="landing">
   	<!-- Banner -->
+		<form method="get" action="/">
 			<section id="banner">
 				<div class="inner">
 					<h2>PhotoMath</h2>
-					<p>Upload image and submit.</p>
-
-          <form method=post enctype=multipart/form-data>
-    					<ul class="actions">
-                <li><input type=file name=file onchange="onFileChange(this)" class="button upload"></li>
-                <li><input type=submit id="submit"value=Submit class="button" hidden="hidden"></li>
-    					</ul>
-            </form>
+					<p></p>
+					<ul class="actions">
+            <li class="equation">
+              <input type=text value="{{string}}" disabled="disabled">
+            </li>
+						<li>
+    					<input type=submit value="Home" class="button">
+            </li>
+					</ul>
 				</div>
 			</section>
-
-			<script>
-				function onFileChange(el){
-					el.classList.add("uploaded");
-					submitEl = document.getElementById("submit");
-					submitEl.removeAttribute("hidden");
-				}
-			</script>
+				</form>
 		</body>
 </html>

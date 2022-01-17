@@ -1,0 +1,131 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,700");
+
+html {
+  background: url("images/banner.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-size: cover;
+}
+
+body, input, select, textarea {
+  color: #646464;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-size: 15pt;
+  font-weight: 300;
+  line-height: 1.75em;
+}
+
+ul.actions {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 2em 0;
+}
+
+ul.actions li > * {
+    margin: 0 !important;
+    width: 70%;
+}
+
+li.image {
+  margin-bottom: 10px;
+}
+
+li.equation {
+  margin-bottom: 40px;
+}
+
+li.result {
+  margin-bottom: 40px;
+}
+
+#banner {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 500px;
+}
+
+h2 {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 2em;
+    line-height: 1.25em;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+p {
+  color: #ffffff;
+}
+
+input {
+    color: #ffffff;
+    background: transparent;
+    border: solid 1px;
+    border-radius: 0.8em;
+    text-align: center;
+    height: 3.5em;
+}
+
+a {
+    color: #ffffff;
+    background: transparent;
+    border: solid 1px;
+    border-radius: 0.8em;
+    text-align: center;
+    height: 3.5em;
+}
+
+input[type="text"] {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+input[disabled="disabled"] {
+  background: transparent;
+}
+
+img {
+  color: #ffffff !important;
+  border: solid 2px;
+  border-radius: 0.8em;
+}
+
+.button {
+  border-color: white;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0 2.25em;
+  letter-spacing: 0.1em;
+  width: 50%;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+.upload {
+  display: inline-block;
+  padding: 100px 0 0 0;
+  height: 100px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url('images/upload-icon.png') center center no-repeat;
+  background-size: 60px 60px;
+  background-color: rgba(128, 75, 0, 0.3);
+  border-color: orange;
+}
+
+.uploaded {
+  background-color: rgba(0, 128, 0, 0.1) !important;
+  border-color: green;
+}
