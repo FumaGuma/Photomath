@@ -10,6 +10,11 @@ Handwritten math symbols dataset<br/>
 https://www.kaggle.com/xainano/handwrittenmathsymbols
 
 <p float="left">
+  <img src="https://user-images.githubusercontent.com/53495210/149847509-7a855326-80cc-4b0d-90f2-1e2ec1d8f4a3.jpg"/>
+  <img src="https://user-images.githubusercontent.com/53495210/149789537-5c83d79f-3cac-4a80-9988-238d3cb2f60c.png"/>
+</p>
+
+<p float="left">
   <img src="https://user-images.githubusercontent.com/53495210/149681422-ab9810e2-5bdf-4f35-890b-e434910bb69f.png"/>
   <img src="https://user-images.githubusercontent.com/53495210/149789537-5c83d79f-3cac-4a80-9988-238d3cb2f60c.png"/>
 </p>
