@@ -8,6 +8,7 @@ https://hub.docker.com/repository/docker/fumaguma/photomathproject<br/>
 Docker image of the project. You can run it on your local browser with following commands and navigating to http://127.0.0.1:5000/. <br/>
 <code>docker pull fumaguma/photomathproject</code><br/>
 <code>docker run -d -p 5000:5000 python-docker</code><br/>
+Playground is the interactive jupyter notebook in which you can test the various functions implemented in the framework.
 
 ## Instructions
 Basic implementation of handwritten character detector with equation solver. 
