@@ -26,14 +26,14 @@ def draw_rectangles(img_name,rect_dat):
         rect = cv.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
     return img
 
-def save_img_with_rect(img_name):
+def save_img_with_rect(img_name): #helper function for plotting
     rect_dat = segment_image(img_name)
     img = draw_rectangles(img_name,rect_dat)
     img = cv.resize(img, (640,480), interpolation=cv.INTER_AREA)
     cv.imwrite(img_name.partition(".")[0] + '_rect.jpg', img)
     return img_name.partition(".")[0] + '_rect.jpg'
 
-def get_area_above_min(percent_max,rect_dat):
+def get_area_above_min(percent_max,rect_dat): #function used to eliminate the labeling of small background noise
     max_area = max([x[2]*x[3] for x in rect_dat[:]])
     fil = [x[2]*x[3]>max_area*percent_max for x in rect_dat[:]]
     return list(compress(rect_dat, fil))
@@ -63,12 +63,12 @@ def get_new_dimensions(img):
         y_dim = int(y_dim/2)
     return (x_dim, y_dim)
 
-def reshape_input_img(img):
+def reshape_input_img(img): #if the image is too large, scale it down
     reshape_img = get_new_dimensions(img)
     img = cv.resize(img, (reshape_img[1],reshape_img[0]), interpolation=cv.INTER_AREA)
     return img
 
-def segment_image(img_name,dilate_multiplier=0.008,minimum_area=0.05):
+def segment_image(img_name,dilate_multiplier=0.008,minimum_area=0.05): #outputs the rectangles of the parts of the image which are to be cropped
     img = cv.imread(img_name)
     img = reshape_input_img(img) #Reduce the size of big images
     fat = int((img.shape[0]+img.shape[1])*dilate_multiplier)   #Number of dilations depends on image dimensions
@@ -87,7 +87,7 @@ def segment_image(img_name,dilate_multiplier=0.008,minimum_area=0.05):
     rect_dat = sorted(rect_dat, key=lambda x: x[0]) # Sorty by image x value
     return rect_dat
 
-def cropped_dataset(img_name,dilate_multiplier=0.008,minimum_area=0.05,image_dim=(45,45)):
+def cropped_dataset(img_name,dilate_multiplier=0.008,minimum_area=0.05,image_dim=(45,45)): #create a dataset of processed cropped images
     rect_dat = segment_image(img_name,dilate_multiplier,minimum_area)
     cropped = []
     buffer = 2 #adds padding to the image
