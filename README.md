@@ -4,6 +4,8 @@
 
 https://photomathproject.herokuapp.com/<br/>
 Application is created with <code>flask</code> web framework. The code for the application is on the <code>flask</code> branch. You can run the app locally by downloading the directory and running two commands, <code>set FLASK_APP=app</code> and <code>flask run</code> inside the directory.
+https://hub.docker.com/repository/docker/fumaguma/photomathproject
+Docker image of the project.
 
 ## Instructions
 Basic implementation of handwritten character detector with equation solver. 
