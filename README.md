@@ -14,7 +14,7 @@ Docker image of the project. You can run it on your local browser by running the
 <code>playground.ipynb</code> is a Jupyter Notebook in which you can test the various functions implemented in the framework.
 
 ## User Guide
-This is a basic implementation of handwritten character detector with equation solver. 
+This is a basic implementation of a handwritten character detector with an equation solver. 
 
 *Note: When passing an image to the system the multiplication should be written as `x` and division as `/`.*
 
