@@ -3,6 +3,7 @@
 ### App
 
 https://photomathproject.herokuapp.com/
+Application is created with <code>flask</code> web framework. The code for the application is on the <code>flask</code> branch.
 
 ## Instructions
 Basic implementation of handwritten character detector with equation solver. 
