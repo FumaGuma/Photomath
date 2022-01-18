@@ -1,6 +1,6 @@
 # Photomath
 
-## App
+### App
 
 https://photomathproject.herokuapp.com/
 
