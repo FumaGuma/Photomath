@@ -13,7 +13,7 @@ It consists of three main parts.
 First are the open CV image processing tools which are located in <code>imageprocessing.py</code>. The user can pass the image of the equation to the <code>imageprocessing.cropped_dataset</code> to get the array of cropped symbols.
 You can fine tune the function with <code>dilate_multiplier</code> parameter if the symbols are too partitioned and <code>minimum_area</code> parameter if the background noise is being recognized as a symbol.
 
-Datasets used:
+Datasets used:</n>
  Basic Handwritten Math Symbols Dataset<br/>
  https://github.com/wblachowski/bhmsds
 
