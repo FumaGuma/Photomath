@@ -1,7 +1,5 @@
 # Photomath
 
-### App
-
 **Flask**<br/>
 https://photomathproject.herokuapp.com/<br/>
 Application is created with <code>flask</code> web framework. The code for the application is on the <code>flask</code> branch. You can run the app locally by downloading the directory and running two commands, <code>set FLASK_APP=app</code> and <code>flask run</code> inside the directory. Usage is very simple, you upload an image to the service, then check the suggested equation, confirm it, and the application returns a solution.<br/>
