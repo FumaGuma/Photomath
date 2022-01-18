@@ -1,5 +1,9 @@
 # Photomath
 
+## App
+
+https://photomathproject.herokuapp.com/
+
 ## Instructions
 Basic implementation of handwritten digit recognizer with equation solver. It consists of three main parts.
 First are the open CV image processing tools which are located in <code>imageprocessing.py</code>. Pass the image of the equation to the <code>imageprocessing.cropped_dataset</code> to get the array of cropped symbols.
