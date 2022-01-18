@@ -4,7 +4,7 @@
 
 **Flask**<br/>
 https://photomathproject.herokuapp.com/<br/>
-Application is created with <code>flask</code> web framework. The code for the application is on the <code>flask</code> branch. You can run the app locally by downloading the directory and running two commands, <code>set FLASK_APP=app</code> and <code>flask run</code> inside the directory.<br/>
+Application is created with <code>flask</code> web framework. The code for the application is on the <code>flask</code> branch. You can run the app locally by downloading the directory and running two commands, <code>set FLASK_APP=app</code> and <code>flask run</code> inside the directory. Application is very simple, you upload an image to the service, then check the equation and get a solution.<br/>
 **Docker**<br/>
 https://hub.docker.com/repository/docker/fumaguma/photomathproject<br/>
 Docker image of the project. You can run it on your local browser by running following commands and navigating to http://127.0.0.1:5000/. <br/>
@@ -48,7 +48,7 @@ Equation solver is very straightforward. It checks the equation for invalid inpu
 
 ## Discussion
 
-There are a lot of edge cases and changing one parameter in processing can significantly alter the predictions of the model, so if you optimize the preprocessing parameters for one series of images your model will give a worse performance on the other. Centering the images by their moments helped for majority of examples that I investigated but would be a deterrent in some nieche cases where the image weight is distributed in a corner. There are also many small tweaks that can help the model correctly identify the equation, for example, the bounding boxes can be expanded on the `x-axis` around the brackets symbols because it helps maintain they shape when they are being reshaped to the dimensions of training data.
+There are a lot of edge cases and changing one parameter in processing can significantly alter the predictions of the model so if you optimize the preprocessing parameters for one series of images your model will give a worse performance on another. Centering the images by their moments helped for majority of examples that I investigated but would be a deterrent in some nieche cases where the image weight is distributed too far of center. There are also many small tweaks that can help the model correctly identify the equation, for example, the bounding boxes can be expanded on the `x-axis` around the brackets symbols because it helps them maintain their shape when they are being reshaped to the dimensions of training data.
 
 Our Deep learning model is also limited by the quality of the available data. A better dataset for training this kind of problem would have either a collection of handwritten digits without much processing, with background information and preserved details of the strokes. Alternatively, a dataset of labeled equations could also work since inference of value of particular symbols is highly dependent on the context (opened brackets must be closed, two operators cannot be adjacent), so the model which has the information about the entire system, not only of individual symbols could utilize the context dependent information.
 
