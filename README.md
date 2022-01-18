@@ -11,7 +11,7 @@ Basic implementation of handwritten character detector with equation solver.
 
 **Open CV character detector**<br/>
 It consists of three main parts.
-First are the open CV image processing tools which are located in <code>imageprocessing.py</code>. The user can pass the image of the equation to the <code>imageprocessing.cropped_dataset</code> to get the array of cropped symbols.
+First are the open CV image processing tools which are located in <code>imageprocessing.py</code>. The user can pass the path to the image of the equation to the <code>imageprocessing.cropped_dataset</code> to get the array of cropped symbols.
 You can fine tune the function with <code>dilate_multiplier</code> parameter if the symbols are too partitioned and <code>minimum_area</code> parameter if the background noise is being recognized as a symbol.
 
 **Datasets used:<br/>**
@@ -32,7 +32,7 @@ The bigger dataset, which is extracted from CHROME dataset, has symbols which ar
 they are `1px` thin so that the input data is as similar as possible to the training dataset. Afterwards, the cropped images are centered.
 The first convolutional layer has a `(5x5)` kernel which is more suited towards the extraction of data in low information environment of binarized single channel images while second and third convolutional layer have `(3x3)` kernel. The data is
 also regularized with `2` MaxPool layers, a Batch Normalization layer and a Dropout layer to ensure that our model is not overfitted.
-It took `30` epochs to sucessfully train our model, reaching a `99%` train and validation accuracy. You can run the cropped data through the network with the <code>imageprocessing.data_to_model</code> to obtain the model's prediction. Alternatively you can simply pass the original image to <code>imageprocessing.process_image</code> function to get the equation from the image.
+It took `30` epochs to sucessfully train our model, reaching a `99%` train and validation accuracy. You can run the cropped data through the network with the <code>imageprocessing.data_to_model</code> to obtain the model's prediction. Alternatively you can simply pass the path to the original image to <code>imageprocessing.process_image</code> function to get the equation from the image.
 
 **Solver**<br/>
 Equation solver is very straightforward. It checks the equation for invalid inputs and if the equation is valid, it splits it into a list of tokens. Solver then goes through the token list while respecting the order of operations. It solves the content of brackets first, applying multiplication and division, then addition and subtraction. You can run the solver using the <code>solver.solve</code> function.
