@@ -12,8 +12,8 @@ Handwritten math symbols dataset<br/>
 https://www.kaggle.com/xainano/handwrittenmathsymbols
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/53495210/149681422-ab9810e2-5bdf-4f35-890b-e434910bb69f.png"/ width="200">
-  <img src="https://user-images.githubusercontent.com/53495210/149789537-5c83d79f-3cac-4a80-9988-238d3cb2f60c.png"/ width="200">
+  <img src="https://user-images.githubusercontent.com/53495210/149681422-ab9810e2-5bdf-4f35-890b-e434910bb69f.png"/ width="400">
+  <img src="https://user-images.githubusercontent.com/53495210/149789537-5c83d79f-3cac-4a80-9988-238d3cb2f60c.png"/ width="400">
 </p>
 
 The second part is the trained convolutional network model. The training was done using two publicly available datasets. 
