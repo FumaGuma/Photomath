@@ -36,7 +36,7 @@ You can fine tune the function with <code>dilate_multiplier</code> parameter if 
 </p>
 
 **Character classifier**<br/>
-For classification we use a convolutional network model. The training was done using two publicly available datasets. 
+For classification we use a convolutional neural network architecture. The training was done using two publicly available datasets. 
 The bigger dataset, which is extracted from CHROME dataset, has symbols which are very thin, rarely thicker than `1px`. That's why we also preprocess all the input images so
 they are `1px` thin so that the input data is as similar as possible to the training dataset. Afterwards, the cropped images are centered.
 The first convolutional layer has a `(5x5)` kernel which is more suited towards the extraction of data in low information environment of binarized single channel images while second and third convolutional layer have `(3x3)` kernel. The data is
