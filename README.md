@@ -2,7 +2,7 @@
 
 ### App
 
-https://photomathproject.herokuapp.com/
+https://photomathproject.herokuapp.com/<br/>
 Application is created with <code>flask</code> web framework. The code for the application is on the <code>flask</code> branch.
 
 ## Instructions
