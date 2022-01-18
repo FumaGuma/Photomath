@@ -35,7 +35,7 @@ def prepare_data():
                 gray = cv.resize(gray, (45,45), interpolation=cv.INTER_AREA)
                 #thresh = gray
                 ret, thresh = cv.threshold(gray,0,255,cv.THRESH_BINARY_INV+cv.THRESH_OTSU)
-                thresh = cv.ximgproc.thinning(thresh) #možda maknuti treba
+                thresh = cv.ximgproc.thinning(thresh)
                 if (i/(len(symbol_dir)))<0.7:
                     X_train.append(thresh)
                     Y_train.append(all_path[j])
