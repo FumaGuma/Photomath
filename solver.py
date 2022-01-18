@@ -79,7 +79,11 @@ def solve(eq):
     while eq!= eq_last_step:
         eq_last_step = eq
         eq = solve_parenthesis(eq)
-    return eq[0]
+    eq[0] = float(eq[0])
+    if eq[0].is_integer():
+        return int(eq[0])
+    else:
+        return eq[0]
 
 def one_op(eq):
     eq = find_negative(eq)

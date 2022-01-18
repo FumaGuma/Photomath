@@ -7,6 +7,7 @@ from os.path import isfile, join
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import datasets, layers, models
+import solver
 
 def data_to_model(cropped):
     eq = []
@@ -19,6 +20,7 @@ def data_to_model(cropped):
 
 def draw_rectangles(img_name,rect_dat):
     img = cv.imread(img_name)
+    img = reshape_input_img(img)
     for i in range(len(rect_dat)):
         x,y,w,h = rect_dat[i]
         rect = cv.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
@@ -53,8 +55,22 @@ def compare_dimensions(rect,ratio=3,buffer_rate=0.2):
     else:
         return 0
 
+def get_new_dimensions(img):
+    x_dim = img.shape[0]
+    y_dim = img.shape[1]
+    while x_dim*y_dim > 1500*1500:
+        x_dim = int(x_dim/2)
+        y_dim = int(y_dim/2)
+    return (x_dim, y_dim)
+
+def reshape_input_img(img):
+    reshape_img = get_new_dimensions(img)
+    img = cv.resize(img, (reshape_img[1],reshape_img[0]), interpolation=cv.INTER_AREA)
+    return img
+
 def segment_image(img_name,dilate_multiplier=0.008,minimum_area=0.05):
     img = cv.imread(img_name)
+    img = reshape_input_img(img) #Reduce the size of big images
     fat = int((img.shape[0]+img.shape[1])*dilate_multiplier)   #Number of dilations depends on image dimensions
     img = cv.blur(cv.cvtColor(img,cv.COLOR_BGR2GRAY),(6,6))   #Image to grayscale and added blur
     img = cv.adaptiveThreshold(img,255,cv.ADAPTIVE_THRESH_GAUSSIAN_C,cv.THRESH_BINARY,31,3)  #Adaptive thresholding helps deal with unequal background illumination
@@ -78,6 +94,7 @@ def cropped_dataset(img_name,dilate_multiplier=0.008,minimum_area=0.05,image_dim
     for i in range(len(rect_dat)):
         buffer_vertical = compare_dimensions(rect_dat[i]) #change crop dimensions if the symbol is a bracket
         img_c = cv.imread(img_name)
+        img_c = reshape_input_img(img_c) #Reduce the size of big images
         try:
             img = img_c[rect_dat[i][1]-buffer+buffer_vertical:rect_dat[i][1]+rect_dat[i][3]+buffer-buffer_vertical, rect_dat[i][0]-buffer-buffer_vertical:rect_dat[i][0]+rect_dat[i][2]+buffer+buffer_vertical]
             #Get cropped image
@@ -99,3 +116,8 @@ def cropped_dataset(img_name,dilate_multiplier=0.008,minimum_area=0.05,image_dim
 def process_image(img_name):
     cropped = cropped_dataset(img_name)
     return data_to_model(cropped)
+
+def image_to_solution(img_name):
+    cropped = cropped_dataset(img_name)
+    eq = data_to_model(cropped)
+    return solver.solve(eq)
