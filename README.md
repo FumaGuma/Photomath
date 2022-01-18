@@ -11,7 +11,7 @@ Docker image of the project. You can run it on your local browser with following
 <code>docker pull fumaguma/photomathproject</code><br/>
 <code>docker run -d -p 5000:5000 python-docker</code><br/>
 **Jupyter Notebook**<br/>
-<code>playground.ipynb</code> is the interactive jupyter notebook in which you can test the various functions implemented in the framework.
+<code>playground.ipynb</code> is a interactive jupyter notebook in which you can test the various functions implemented in the framework.
 
 ## Instructions
 Basic implementation of handwritten character detector with equation solver. 
