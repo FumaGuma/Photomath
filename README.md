@@ -32,7 +32,7 @@ The lesson I learned from doing this project is that there are a lot of edge cas
 Our Deep learning model is also limited by the quality of the available data. A better dataset for training this kind of problem would have either a collection of handwritten digits without much processing, with background information and preserved details of the strokes. Alternatively, a dataset of labeled equations could also work since inference of value of particular symbols is highly dependent on the context (opened brackets must be closed, two operators cannot be adjacent), so the model which has the information about the entire system, not only of individual symbols could utilize the context dependent information.
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/53495210/149847896-6d0f80ab-4686-4beb-a5d1-6ac92cd415db.jpg"/ width="48">
-  <img src="https://user-images.githubusercontent.com/53495210/149847509-7a855326-80cc-4b0d-90f2-1e2ec1d8f4a3.jpg"/ width="48">
+  <img src="https://user-images.githubusercontent.com/53495210/149847896-6d0f80ab-4686-4beb-a5d1-6ac92cd415db.jpg"/ width="300">
+  <img src="https://user-images.githubusercontent.com/53495210/149847509-7a855326-80cc-4b0d-90f2-1e2ec1d8f4a3.jpg"/ width="300">
 </p>
 
