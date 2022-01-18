@@ -15,14 +15,14 @@ def token_list(eq):
         tokens.append(num)
     return tokens
 
-def symbols_valid(eq):
+def symbols_valid(eq): #test if symbols are in the allowed list
     eq_part = [symbol for symbol in eq]
     if all(item in accepted_symbols for item in eq_part):
         return True
     else:
         return False
 
-def operators_valid(eq):
+def operators_valid(eq): #test if the operators are on legal positions
     if eq[0]=='x' or eq[0]=='/' or eq[0]=='+': return False
     if eq[len(eq)-1]=='x' or eq[len(eq)-1]=='/' or eq[len(eq)-1]=='+' or eq[len(eq)-1]=='-': return False
     for i in range(1,len(eq)-1):
@@ -32,8 +32,27 @@ def operators_valid(eq):
                 return False
     return True
 
-def is_expression_valid(eq):
-    if not (symbols_valid(eq) and operators_valid(eq)):
+def check_for_bracket_pairs(eq_check): #test if the brackets are paired
+    eq = copy.deepcopy(eq_check)
+    eq = token_list(eq)
+    brack1 = 0
+    brack2 = 0
+    for i in range(len(eq)):
+        if eq[i] == '(':
+            brack1 = i
+            for j in range(i,len(eq)):
+                if eq[j] == ')':
+                    brack2 = j
+                    eq[i] = '1'
+                    eq[j] = '1'
+                    break;
+    for i in range(len(eq)):
+        if (eq[i] == '(' or eq[i] == ')'):
+            return False
+    return True
+
+def is_expression_valid(eq): #run all equation validity tests
+    if not (symbols_valid(eq) and operators_valid(eq) and check_for_bracket_pairs(eq)):
         return False
     else:
         return True
@@ -44,7 +63,7 @@ def is_symbol_num(token):
 def is_token_negative(token):
     return True if any([x=='-' for x in token]) else False
 
-def find_negative(eq):
+def find_negative(eq): #support for unitary operators
     eq = copy.deepcopy(eq)
     if eq[0] == '-' and not is_token_negative(eq[1]):
         eq[1] = '-'+eq[1]
