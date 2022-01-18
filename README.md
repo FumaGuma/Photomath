@@ -7,7 +7,7 @@ https://photomathproject.herokuapp.com/
 ## Instructions
 Basic implementation of handwritten digit recognizer with equation solver. 
 
-* **Note:** When passing an image to the system the multiplication should be written as `x` and division as `/`.*
+*Note: When passing an image to the system the multiplication should be written as `x` and division as `/`.*
 
 It consists of three main parts.
 First are the open CV image processing tools which are located in <code>imageprocessing.py</code>. Pass the image of the equation to the <code>imageprocessing.cropped_dataset</code> to get the array of cropped symbols.
