@@ -41,7 +41,7 @@ also regularized with `2` MaxPool layers, a Batch Normalization layer, and a Dro
 It took `30` epochs to successfully train our model, reaching a `99%` train and validation accuracy. You can run the cropped data through the network with the <code>imageprocessing.data_to_model</code> to obtain the model's prediction. Alternatively, you can simply pass the path to the original image to <code>imageprocessing.process_image</code> function to get the equation from the image.
 
 **Solver**<br/>
-The equation solver is very straightforward. It checks the equation for invalid inputs and if the equation is valid, it splits it into a list of tokens. The solver then goes through the token list while respecting the order of operations. It solves the content of brackets first, applying multiplication and division, then addition and subtraction. You can run the solver using the <code>solver.solve</code> function. You can also use pass the image path to <code>imageprocessing.image_to_solution</code> which will take the image through the entire system and output the solution.
+The equation solver is very straightforward. It checks the equation for invalid inputs and if the equation is valid, it splits it into a list of tokens. The solver then goes through the token list while respecting the order of operations. It solves the content inside the brackets first, applying multiplication and division, then addition and subtraction. You can run the solver using the <code>solver.solve</code> function. You can also use pass the image path to <code>imageprocessing.image_to_solution</code> which will take the image through the entire system and output the solution.
 
 ## Discussion
 
